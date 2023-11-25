@@ -44,6 +44,7 @@ func (nc NotesControllers) DeleteNote(c *fiber.Ctx) error {
 func (nc NotesControllers) GetMyNotes(c *fiber.Ctx) error {
 	userID, err := pkg.GetIdentity(c.Cookies("token"))
 	if err != nil {
+		fmt.Println("TOKEN", c.Cookies("token"))
 		return fiber.NewError(500, "Ошибка при создании заметки")
 	}
 

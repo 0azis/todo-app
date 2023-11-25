@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"encoding/json"
 	"fmt"
 	"github.com/gofiber/fiber/v2"
 	"time"
@@ -21,7 +22,8 @@ func (ac AuthControllers) SignUp(c *fiber.Ctx) error {
 	}
 	isUserValid := models.IsUserValid{}.ValidCredentials(credentials)
 	if isUserValid.Email != "" || isUserValid.Password != "" {
-		return c.JSON(isUserValid)
+		isUserValidJSON, _ := json.Marshal(isUserValid)
+		return fiber.NewError(409, string(isUserValidJSON))
 	}
 
 	hashedPassword, _ := pkg.Encode([]byte(credentials.Password))
