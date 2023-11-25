@@ -70,10 +70,7 @@ export const GetNotes = () => {
         })
     }
 
-    if (!IsAuth()) {
-        return <Navigate to="/signup" />
-    }
-
+    
     if (isLoading) {
         return (
             <>

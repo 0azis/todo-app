@@ -4,9 +4,7 @@ import {useState} from "react";
 import "./signUp.css"
 
 export const SignUp = () => {
-    if (IsAuth()) {
-        return <Navigate to='/notes' />
-    }
+    
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [values, setValues] = useState({email: '', password: '' })
     // eslint-disable-next-line react-hooks/rules-of-hooks

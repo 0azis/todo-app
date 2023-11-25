@@ -15,18 +15,7 @@ const Logout = () => {
 }
 
 export const NavBar = () => {
-    if (IsAuth()) {
-        return (
-            <div className="navbar">
-                <div className="logo">
-                    <a href="/" className="logo">NNapp</a>
-                </div>
-                <div className="links">
-                    <a href="" className="link" onClick={Logout}>Logout</a>
-                </div>
-            </div>
-        );
-    }
+    
     return (
         <div className="navbar">
             <div className="logo">
