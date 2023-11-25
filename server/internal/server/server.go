@@ -14,11 +14,13 @@ var notesControllers controllers.NotesControllers
 func StartServer() {
 	app := fiber.New()
 
+	
 	app.Use(cors.New(cors.Config{
-		AllowOrigins:     "https://todo-app-jet-seven.vercel.app/",
-		AllowHeaders:     "Origin, Content-Type, Accept, Authorization",
-		AllowCredentials: true,
-	}))
+        AllowHeaders:     "Origin,Content-Type,Accept,Content-Length,Accept-Language,Accept-Encoding,Connection,Access-Control-Allow-Origin",
+        AllowOrigins:     "https://todo-app-jet-seven.vercel.app/",
+        AllowCredentials: true,
+        AllowMethods:     "GET,POST,HEAD,PUT,DELETE,PATCH,OPTIONS",
+    }))
 
 	api := app.Group("api")
 
