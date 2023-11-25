@@ -17,7 +17,7 @@ export const SignIn = () => {
     const submitHandler = e => {
         e.preventDefault()
         setLoading(true)
-        fetch('http://localhost:8000/api/auth/signin', {
+        fetch('https://notes-mzmm.onrender.com/api/auth/signin', {
             method: 'POST',
             credentials: 'include',
             headers: {

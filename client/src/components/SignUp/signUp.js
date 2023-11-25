@@ -16,7 +16,7 @@ export const SignUp = () => {
     const submitHandler = e => {
         e.preventDefault()
         setLoading(true)
-        fetch('http://localhost:8000/api/auth/signup', {
+        fetch('https://notes-mzmm.onrender.com/api/auth/signup', {
             method: 'POST',
             credentials: 'include',
             headers: {

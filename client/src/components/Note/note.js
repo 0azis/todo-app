@@ -10,7 +10,7 @@ export const Note = ({noteID, text, date}) => {
     const submitHandler = e => {
         e.preventDefault()
 
-        fetch(`http://localhost:8000/api/notes/?note_id=${noteID}`, {
+        fetch(`https://notes-mzmm.onrender.com/api/notes/?note_id=${noteID}`, {
             method: 'DELETE',
             credentials: 'include',
             headers: {
@@ -44,7 +44,7 @@ export const GetNotes = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            await fetch('http://localhost:8000/api/notes', { credentials: 'include', method: 'GET' })
+            await fetch('https://notes-mzmm.onrender.com/api/notes', { credentials: 'include', method: 'GET' })
                 .then(stats => stats.json())
                 .then(data => setData(data))
                 .catch(err => setError(err))
@@ -58,7 +58,7 @@ export const GetNotes = () => {
     const submitHandler = e => {
         e.preventDefault()
         setLoading(true)
-        fetch('http://localhost:8000/api/notes', {
+        fetch('https://notes-mzmm.onrender.com/api/notes', {
             method: 'POST',
             credentials: 'include',
             headers: {
