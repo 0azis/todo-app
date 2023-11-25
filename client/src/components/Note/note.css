@@ -1,0 +1,67 @@
+.notes {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.note {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #EAF4D3;
+    margin-top:10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.note_info {
+    text-align: left;
+}
+
+.note_date {
+    color: #c2c2c2;
+    margin: 0;
+}
+
+.note_text {
+    margin: 0;
+    font-weight: bold;
+}
+
+.btn_delete {
+    background-color: #fff;
+    color: #994636;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "SF Pro Display";
+}
+
+
+.btn_delete:hover {
+    color: #CA907E;
+    transition: .1s ease-out;
+}
+
+
+
+.input_newnote {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #DBD8AE;
+    outline: none;
+    font-family: "SF Pro Display";
+}
+
+.loader {
+    position: absolute;
+    top: 20%;
+    left:50%;
+}
+
+.intro {
+    margin-top: 100px;
+    color: #CA907E;
+}
