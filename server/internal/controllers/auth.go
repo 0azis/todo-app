@@ -47,6 +47,8 @@ func (ac AuthControllers) SignUp(c *fiber.Ctx) error {
 		Name:    "token",
 		Value:   accessToken,
 		Expires: time.Now().Add(time.Minute * 10),
+		SameSite: "None",
+		Secure: true,
 	})
 
 	return fiber.NewError(200, "Успешная регистрация")
@@ -77,6 +79,8 @@ func (ac AuthControllers) SignIn(c *fiber.Ctx) error {
 		Name:    "token",
 		Value:   accessToken,
 		Expires: time.Now().Add(time.Minute * 10),
+		SameSite: "None",
+		Secure: true,
 	})
 	return fiber.NewError(200, "Успешный вход")
 }
