@@ -1,0 +1,6 @@
+TODO list with tasks:
+1. Replace JWT token from cookie to bearer on the client
+2. Make a pleasant design 
+3. Add folders
+4. Add tags
+5. Rewrite the client code (more correctly structure)
